@@ -55,7 +55,7 @@ export default function Navbar() {
         </Link>
 
         {/* DESKTOP MENU */}
-        <div className="hidden md:flex items-center gap-[30px] text-sm">
+        <div className="hidden md:flex items-center gap-[30px] text-sm md:text-lg">
 
           {menuItems.map((item, i) => (
             <button

@@ -49,7 +49,7 @@ export default function Hero() {
               viewport={{ once: false }}
               transition={{ delay: 0.2 }}
               whileHover={{ scale: 1.05 }}
-              className="border border-[#A37C34] px-4 py-2 text-[11px] md:text-[20px] tracking-[0.2em] text-[#A37C34] w-max"
+              className="border border-[#A37C34] px-4 py-2 text-[11px] md:text-[15px] tracking-[0.2em] text-[#A37C34] w-max"
             >
               INDIA'S CLOSED-DOOR BUSINESS COUNCIL
             </motion.div>
