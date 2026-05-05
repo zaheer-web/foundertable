@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import star from "../img/vector.png";
+import star from "../img/Vector.png";
 import bgVideo from "../img/bg-vid.mp4";
 
 export default function Hero() {
@@ -116,7 +116,7 @@ export default function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-[#A37C34] hover:bg-[#8c692d] text-black px-6 py-3 text-sm"
+                className="bg-[#A37C34] hover:bg-[#8c692d] text-black px-6 py-3 text-sm md:text-lg"
               >
                 REQUEST YOUR SEAT
               </motion.button>
