@@ -51,7 +51,7 @@ export default function InvestmentSection() {
   return (
     <section
       id="seat"
-      className="w-full overflow-hidden text-white"
+      className="w-full overflow-hidden text-white "
       style={{
         background:
           "linear-gradient(180deg, #0F0F0F 0%, #3D2E13 134.42%)",
@@ -104,6 +104,7 @@ export default function InvestmentSection() {
             flex
             items-center
             h-full
+            mt-10
           "
         >
           <div

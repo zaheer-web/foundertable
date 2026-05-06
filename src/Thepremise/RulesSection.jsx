@@ -71,6 +71,7 @@ export default function RulesSection() {
         className="
           relative
           max-w-7xl
+          pt-20
           mx-auto
           w-full
           px-5

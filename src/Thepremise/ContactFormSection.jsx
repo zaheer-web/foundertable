@@ -15,7 +15,7 @@ export default function ContactFormSection() {
   return (
     <section
       id="contact"
-      className="w-full text-white overflow-hidden"
+      className="w-full text-white overflow-hidden "
       style={{
         background:
           "linear-gradient(180deg, #0F0F0F 0%, #3D2E13 134.42%)",
@@ -23,6 +23,7 @@ export default function ContactFormSection() {
     >
       <div
         className="
+        
           w-full
           min-h-screen
           grid
@@ -34,6 +35,8 @@ export default function ContactFormSection() {
         <div
           className="
             h-full
+            mt-20
+            
             flex
             items-center
             justify-center
@@ -41,6 +44,7 @@ export default function ContactFormSection() {
             md:px-10
             py-14
             lg:py-0
+          
           "
         >
           <div

@@ -62,7 +62,7 @@ export default function TableSection() {
   return (
     <section
       id="table"
-      className="relative w-full overflow-hidden py-20 md:py-32 px-5 md:px-10 text-white"
+      className="relative w-full overflow-hidden py-30 md:py-32 px-5 md:px-10 text-white"
       style={{
         background:
           "linear-gradient(180deg, #0F0F0F 0%, #3D2E13 134.42%)",
