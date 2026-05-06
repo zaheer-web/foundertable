@@ -422,60 +422,83 @@ export default function Hero() {
               "
             >
               {/* PRIMARY BUTTON */}
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.97 }}
-                className="
-                  bg-[#A37C34]
-                  hover:bg-[#8c692d]
-                  text-black
-                  px-5
-                  py-3
-                  rounded-
-                  text-[11px]
-                  sm:text-[12px]
-                  md:text-[13px]
-                  tracking-[0.14em]
-                  transition-all
-                  duration-300
-                  w-full
-                  sm:w-fit
-                  font-medium
-                "
-                style={{
-                  fontFamily: "Inter",
-                }}
-              >
-                REQUEST YOUR SEAT
-              </motion.button>
+              {/* PRIMARY BUTTON */}
+<motion.button
+  whileHover={{ scale: 1.02 }}
+  whileTap={{ scale: 0.97 }}
 
-              {/* SECONDARY BUTTON */}
-              <motion.button
-                whileHover={{ x: 4 }}
-                className="
-                  text-white
-                  border
-                  border-white/20
-                  hover:border-[#A37C34]
-                  hover:bg-white/5
-                  rounded-
-                  px-5
-                  py-3
-                  text-[11px]
-                  sm:text-[12px]
-                  tracking-[0.12em]
-                  transition-all
-                  duration-300
-                  w-full
-                  sm:w-fit
-                "
-                style={{
-                  fontFamily: "Inter",
-                  fontWeight: "500",
-                }}
-              >
-                UNDERSTAND THE PREMISE
-              </motion.button>
+  /* 👇 ADD THIS */
+  onClick={() => {
+    const section =
+      document.getElementById("contact");
+
+    section?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }}
+
+  className="
+    bg-[#A37C34]
+    hover:bg-[#8c692d]
+    text-black
+    px-5
+    py-3
+    rounded-
+    text-[11px]
+    sm:text-[12px]
+    md:text-[13px]
+    tracking-[0.14em]
+    transition-all
+    duration-300
+    w-full
+    sm:w-fit
+    font-medium
+  "
+  style={{
+    fontFamily: "Inter",
+  }}
+>
+  REQUEST YOUR SEAT
+</motion.button>
+
+{/* SECONDARY BUTTON */}
+<motion.button
+  whileHover={{ x: 4 }}
+
+  /* 👇 ADD THIS */
+  onClick={() => {
+    const section =
+      document.getElementById("premise");
+
+    section?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }}
+
+  className="
+    text-white
+    border
+    border-white/20
+    hover:border-[#A37C34]
+    hover:bg-white/5
+    rounded-
+    px-5
+    py-3
+    text-[11px]
+    sm:text-[12px]
+    tracking-[0.12em]
+    transition-all
+    duration-300
+    w-full
+    sm:w-fit
+  "
+  style={{
+    fontFamily: "Inter",
+    fontWeight: "500",
+  }}
+>
+  UNDERSTAND THE PREMISE
+</motion.button>
             </motion.div>
           </motion.div>
         </div>

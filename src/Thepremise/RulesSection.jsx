@@ -281,31 +281,43 @@ export default function RulesSection() {
             </p>
 
             {/* BUTTON */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="
-                mt-8
-                border
-                border-[#A37C34]
-                text-[#A37C34]
-                px-6
-                py-3
-                text-[11px]
-                tracking-[0.2em]
-                uppercase
-                hover:bg-[#A37C34]
-                hover:text-black
-                transition-all
-                duration-300
-              "
-              style={{
-                fontFamily: "Inter",
-                fontWeight: "500",
-              }}
-            >
-              THE TABLEONE PROTOCOL
-            </motion.button>
+           {/* BUTTON */}
+<motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+
+  /* 👇 ADD THIS */
+  onClick={() => {
+    const section =
+      document.getElementById("contact");
+
+    section?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }}
+
+  className="
+    mt-8
+    border
+    border-[#A37C34]
+    text-[#A37C34]
+    px-6
+    py-3
+    text-[11px]
+    tracking-[0.2em]
+    uppercase
+    hover:bg-[#A37C34]
+    hover:text-black
+    transition-all
+    duration-300
+  "
+  style={{
+    fontFamily: "Inter",
+    fontWeight: "500",
+  }}
+>
+  THE TABLEONE PROTOCOL
+</motion.button>
           </div>
         </motion.div>
       </div>

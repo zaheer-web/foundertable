@@ -348,56 +348,68 @@ export default function InvestmentSection() {
             </ul>
 
             {/* BUTTON */}
-            <div>
-              <motion.button
-                whileHover={{
-                  scale: 1.04,
-                }}
-                whileTap={{
-                  scale: 0.95,
-                }}
-                className="
-                  border
-                  border-[#A37C34]
-                  text-[#D6B06A]
-                  px-6
-                  py-3
-                  text-[11px]
-                  tracking-[0.18em]
-                  uppercase
-                  hover:bg-[#A37C34]
-                  hover:text-black
-                  transition-all
-                  duration-300
-                "
-                style={{
-                  fontFamily: "Inter",
-                  fontWeight: "500",
-                }}
-              >
-                REQUEST AN INVITATION
-              </motion.button>
+            {/* BUTTON */}
+<div>
+  <motion.button
+    whileHover={{
+      scale: 1.04,
+    }}
+    whileTap={{
+      scale: 0.95,
+    }}
+    
+    /* 👇 ADD THIS */
+    onClick={() => {
+      const section =
+        document.getElementById("contact");
 
-              {/* FOOTER TEXT */}
-              <p
-                className="
-                  text-[12px]
-                  md:text-[13px]
-                  text-gray-400
-                  mt-4
-                  leading-[1.7]
-                  max-w-[480px]
-                "
-                style={{
-                  fontFamily: "Inter",
-                  fontWeight: "400",
-                }}
-              >
-                TableOne does not sell seats.
-                Every invitation is personal.
-                Every seat is earned.
-              </p>
-            </div>
+      section?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }}
+
+    className="
+      border
+      border-[#A37C34]
+      text-[#D6B06A]
+      px-6
+      py-3
+      text-[11px]
+      tracking-[0.18em]
+      uppercase
+      hover:bg-[#A37C34]
+      hover:text-black
+      transition-all
+      duration-300
+    "
+    style={{
+      fontFamily: "Inter",
+      fontWeight: "500",
+    }}
+  >
+    REQUEST AN INVITATION
+  </motion.button>
+
+  {/* FOOTER TEXT */}
+  <p
+    className="
+      text-[12px]
+      md:text-[13px]
+      text-gray-400
+      mt-4
+      leading-[1.7]
+      max-w-[480px]
+    "
+    style={{
+      fontFamily: "Inter",
+      fontWeight: "400",
+    }}
+  >
+    TableOne does not sell seats.
+    Every invitation is personal.
+    Every seat is earned.
+  </p>
+</div>
           </div>
         </div>
       </div>
