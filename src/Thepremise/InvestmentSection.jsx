@@ -2,132 +2,402 @@ import React from "react";
 import img from "../img/img-3.png";
 import { motion } from "framer-motion";
 
+import {
+  Crown,
+  Wine,
+  Users2,
+  Handshake,
+  Globe,
+  ShieldCheck,
+} from "lucide-react";
+
+/* 👇 PREMIUM FONTS */
+import "@fontsource/cormorant-garamond/300.css";
+import "@fontsource/cormorant-garamond/400.css";
+
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/400-italic.css";
+
 export default function InvestmentSection() {
+  const features = [
+    {
+      icon: Crown,
+      text: "Boutique venue, exclusively reserved",
+    },
+    {
+      icon: Wine,
+      text: "Full multi-course dinner & beverages",
+    },
+    {
+      icon: Users2,
+      text: "Pre-event curated guest dossier",
+    },
+    {
+      icon: Handshake,
+      text: "Host-facilitated conversation",
+    },
+    {
+      icon: ShieldCheck,
+      text: "Consent-based post-table introductions",
+    },
+    {
+      icon: Globe,
+      text: "Lifetime seat in the TableOne network",
+    },
+  ];
+
   return (
-    <section id="seat"
-      className="w-full text-white "
+    <section
+      id="seat"
+      className="w-full overflow-hidden text-white"
       style={{
         background:
           "linear-gradient(180deg, #0F0F0F 0%, #3D2E13 134.42%)",
       }}
     >
-      <div className="w-full h-auto lg:h-[800px] grid lg:grid-cols-2">
-
+      {/* MAIN */}
+      <div
+        className="
+          max-w-[1500px]
+          mx-auto
+          grid
+          lg:grid-cols-2
+          items-stretch
+          min-h-[720px]
+        "
+      >
         {/* LEFT IMAGE */}
-        <div className="w-full h-[300px] sm:h-[400px] lg:h-full overflow-hidden">
+        <div
+          className="
+            relative
+            w-full
+            h-[320px]
+            sm:h-[420px]
+            lg:h-full
+            overflow-hidden
+          "
+        >
           <motion.img
             src={img}
             alt="dinner"
-            className="w-full h-full object-cover"
-            initial={{ scale: 1.1 }}
+            className="
+              w-full
+              h-full
+              object-cover
+            "
+            initial={{ scale: 1.06 }}
             whileInView={{ scale: 1 }}
-            whileHover={{ scale: 1.08 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: false }}   // ✅ FIX
+            whileHover={{ scale: 1.03 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false }}
           />
+
+          {/* OVERLAY */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/25 to-black/70" />
         </div>
 
         {/* RIGHT CONTENT */}
-        <div className="w-full h-full flex items-center md:pt-25">
-          
-          <div className="max-w-[621px] px-6 md:px-10 py-10 lg:py-0 flex flex-col justify-center gap-5">
-
+        <div
+          className="
+            flex
+            items-center
+            h-full
+          "
+        >
+          <div
+            className="
+              w-full
+              max-w-[580px]
+              px-6
+              md:px-10
+              py-12
+              flex
+              flex-col
+              justify-center
+            "
+          >
             {/* TAG */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: false, amount: 0.3 }}   // ✅ FIX
-              className="border border-[#A37C34] text-[#A37C34] text-xs md:text-xl tracking-widest px-3 py-1 w-max"
+              initial={{
+                opacity: 0,
+                y: 30,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 0.5,
+              }}
+              viewport={{
+                once: false,
+                amount: 0.3,
+              }}
+              className="
+                border
+                border-[#A37C34]
+                text-[#A37C34]
+                text-[10px]
+                tracking-[0.20em]
+                px-4
+                py-2
+                w-max
+                mb-6
+              "
+              style={{
+                fontFamily: "Inter",
+                fontWeight: "500",
+              }}
             >
               THE INVESTMENT
             </motion.div>
 
             {/* HEADING */}
             <motion.h2
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: false, amount: 0.3 }}   // ✅ FIX
-              className="text-lg sm:text-xl md:text-3xl lg:text-5xl font-light leading-tight"
+              initial={{
+                opacity: 0,
+                y: 40,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 0.6,
+                delay: 0.1,
+              }}
+              viewport={{
+                once: false,
+                amount: 0.3,
+              }}
+              className="
+                text-[34px]
+                sm:text-[42px]
+                md:text-[52px]
+                leading-[0.96]
+                text-white
+                mb-5
+              "
+              style={{
+                fontFamily:
+                  "Cormorant Garamond",
+                fontWeight: "300",
+              }}
             >
-              A SEAT AT THE TABLE IS <br />
-              PRICED AT ONE TRUTH— <br />
-              <span className="text-[#A37C34] italic">
-                ACCESS HAS REAL VALUE.
+              A SEAT AT THE
+              TABLE IS PRICED
+              AT ONE TRUTH—
+
+              <span className="text-[#A37C34] italic block mt-2">
+                ACCESS HAS
+                REAL VALUE.
               </span>
             </motion.h2>
 
             {/* PRICE */}
             <motion.h3
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: false, amount: 0.3 }}   // ✅ FIX
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-light cursor-pointer"
+              initial={{
+                opacity: 0,
+                scale: 0.8,
+              }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+              }}
+              transition={{
+                duration: 0.5,
+              }}
+              viewport={{
+                once: false,
+                amount: 0.3,
+              }}
+              className="
+                text-[36px]
+                md:text-[56px]
+                text-white
+                mb-5
+              "
+              style={{
+                fontFamily:
+                  "Cormorant Garamond",
+                fontWeight: "300",
+              }}
             >
               ₹25,000
             </motion.h3>
 
             {/* SUB TEXT */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              viewport={{ once: false, amount: 0.3 }}   // ✅ FIX
-              className="flex flex-wrap gap-3 text-xs sm:text-[15px] text-[#A37C34]"
+            <div
+              className="
+                flex
+                flex-wrap
+                gap-2
+                mb-7
+              "
             >
-              <span className="hover:text-white transition">• PER PRINCIPAL</span>
-              <span className="hover:text-white transition">• PER TABLE</span>
-              <span className="hover:text-white transition">• ALL-INCLUSIVE</span>
-            </motion.div>
+              {[
+                "PER PRINCIPAL",
+                "PER TABLE",
+                "ALL-INCLUSIVE",
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="
+                    border
+                    border-[#A37C34]/20
+                    bg-[#A37C34]/10
+                    text-[#D6B06A]
+                    px-3
+                    py-2
+                    text-[10px]
+                    tracking-[0.14em]
+                    rounded-full
+                  "
+                  style={{
+                    fontFamily: "Inter",
+                    fontWeight: "500",
+                  }}
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
 
             {/* FEATURES */}
-            <ul className="space-y-2 text-sm md:text-[14px] text-gray-300 leading-relaxed">
-              {[
-                "Boutique venue, exclusively reserved",
-                "Full multi-course dinner & beverages",
-                "Pre-event curated guest dossier",
-                "Host-facilitated conversation",
-                "Consent-based post-table introductions",
-                "Lifetime seat in the TableOne network",
-              ].map((item, i) => (
-                <motion.li
-                  key={i}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  whileHover={{ x: 8 }}
-                  transition={{ delay: i * 0.08 }}
-                  viewport={{ once: false, amount: 0.3 }}   // ✅ FIX
-                  className="hover:text-white transition cursor-pointer"
-                >
-                  • {item}
-                </motion.li>
-              ))}
+            <ul className="space-y-3 mb-8">
+              {features.map((item, i) => {
+                const Icon = item.icon;
+
+                return (
+                  <motion.li
+                    key={i}
+                    initial={{
+                      opacity: 0,
+                      x: -20,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0,
+                    }}
+                    transition={{
+                      delay: i * 0.08,
+                    }}
+                    viewport={{
+                      once: false,
+                      amount: 0.3,
+                    }}
+                    className="
+                      flex
+                      items-center
+                      gap-3
+                      group
+                    "
+                  >
+                    {/* ICON */}
+                    <div
+                      className="
+                        w-[36px]
+                        h-[36px]
+                        rounded-full
+                        border
+                        border-[#A37C34]/20
+                        bg-[#A37C34]/10
+                        flex
+                        items-center
+                        justify-center
+                        group-hover:bg-[#A37C34]
+                        transition-all
+                        duration-300
+                      "
+                    >
+                      <Icon
+                        size={16}
+                        className="
+                          text-[#D6B06A]
+                          group-hover:text-black
+                          transition-all
+                          duration-300
+                        "
+                        strokeWidth={2}
+                      />
+                    </div>
+
+                    {/* TEXT */}
+                    <p
+                      className="
+                        text-[13px]
+                        md:text-[14px]
+                        text-gray-300
+                        leading-[1.6]
+                        group-hover:text-white
+                        transition-all
+                        duration-300
+                      "
+                      style={{
+                        fontFamily: "Inter",
+                        fontWeight: "400",
+                      }}
+                    >
+                      {item.text}
+                    </p>
+                  </motion.li>
+                );
+              })}
             </ul>
 
             {/* BUTTON */}
-            <div className="pt-2">
+            <div>
               <motion.button
-                whileHover={{ scale: 1.08 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-[#A37C34] text-[#A37C34] px-5 py-2 text-sm md:text-[16px] hover:bg-[#A37C34] hover:text-black transition duration-300"
+                whileHover={{
+                  scale: 1.04,
+                }}
+                whileTap={{
+                  scale: 0.95,
+                }}
+                className="
+                  border
+                  border-[#A37C34]
+                  text-[#D6B06A]
+                  px-6
+                  py-3
+                  text-[11px]
+                  tracking-[0.18em]
+                  uppercase
+                  hover:bg-[#A37C34]
+                  hover:text-black
+                  transition-all
+                  duration-300
+                "
+                style={{
+                  fontFamily: "Inter",
+                  fontWeight: "500",
+                }}
               >
                 REQUEST AN INVITATION
               </motion.button>
 
-              <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-                viewport={{ once: false, amount: 0.3 }}   // ✅ FIX
-                className="text-xs md:text-sm text-white mt-2 md:mt-4"
+              {/* FOOTER TEXT */}
+              <p
+                className="
+                  text-[12px]
+                  md:text-[13px]
+                  text-gray-400
+                  mt-4
+                  leading-[1.7]
+                  max-w-[480px]
+                "
+                style={{
+                  fontFamily: "Inter",
+                  fontWeight: "400",
+                }}
               >
-                TableOne does not sell seats. Every invitation is personal. Every seat is earned.
-              </motion.p>
+                TableOne does not sell seats.
+                Every invitation is personal.
+                Every seat is earned.
+              </p>
             </div>
-
           </div>
         </div>
       </div>
