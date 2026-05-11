@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../img/img-3.png";
+import img from "../img/image-12.png";
 import { motion } from "framer-motion";
 
 import {
