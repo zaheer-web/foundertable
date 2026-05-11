@@ -127,6 +127,7 @@ export default function Hero() {
           flex
           items-end
           md:items-center
+          justify-center
           min-h-[78vh]
           md:min-h-screen
           pt-16
@@ -150,8 +151,12 @@ export default function Hero() {
               gap-3
               py-10
               md:py-0
-              items-start
-              text-left
+
+              items-center
+              text-center
+
+              md:items-start
+              md:text-left
             "
           >
             {/* TAG */}
@@ -357,6 +362,10 @@ export default function Hero() {
                 flex-row
                 gap-2
                 mt-3
+
+                justify-center
+                md:justify-start
+
                 w-full
                 md:w-fit
               "
@@ -381,7 +390,7 @@ export default function Hero() {
                   md:px-5
                   py-2.5
                   md:py-3
-                  rounded-full
+                  
                   text-[9px]
                   sm:text-[10px]
                   md:text-[13px]
@@ -415,7 +424,7 @@ export default function Hero() {
                   border-white/20
                   hover:border-[#A37C34]
                   hover:bg-white/5
-                  rounded-full
+                 
                   px-3.5
                   md:px-5
                   py-2.5

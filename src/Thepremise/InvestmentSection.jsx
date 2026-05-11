@@ -216,7 +216,7 @@ export default function InvestmentSection() {
               }}
               className="
                 text-[36px]
-                md:text-[56px]
+                md:text-[96px]
                 text-white
                 mb-5
               "

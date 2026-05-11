@@ -318,6 +318,7 @@ export default function ContactFormSection() {
                     mt-5
                     leading-[1.8]
                     max-w-[520px]
+                    mb-10
                   "
                   style={{
                     fontFamily: "Inter",

@@ -1,6 +1,12 @@
 import React from "react";
 import { Mail, Phone } from "lucide-react";
-import { FaXTwitter, FaYoutube, FaFacebookF, FaInstagram } from "react-icons/fa6";
+import {
+  FaXTwitter,
+  FaYoutube,
+  FaFacebookF,
+  FaInstagram,
+} from "react-icons/fa6";
+
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
@@ -38,7 +44,29 @@ export default function Footer() {
         </motion.div>
 
         {/* GRID */}
-        <div className="w-full max-w-[1272px] mx-auto flex flex-col md:flex-row justify-between gap-[50px]">
+        <div
+          className="
+            w-full
+            max-w-[1272px]
+            mx-auto
+
+            flex
+            flex-col
+            md:flex-row
+
+            justify-between
+
+            gap-[50px]
+
+            /* 👇 MOBILE CENTER */
+            items-center
+            text-center
+
+            /* 👇 DESKTOP SAME */
+            md:items-start
+            md:text-left
+          "
+        >
 
           {/* LEFT */}
           <motion.div
@@ -46,7 +74,17 @@ export default function Footer() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: false }}
-            className="w-full md:w-[230px] flex flex-col gap-[30px]"
+            className="
+              w-full
+              md:w-[230px]
+
+              flex
+              flex-col
+              gap-[30px]
+
+              items-center
+              md:items-start
+            "
           >
             <h3 className="text-[#C6A75E] text-sm md:text-lg tracking-widest">
               Quick Links
@@ -72,14 +110,24 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: false }}
-            className="w-full md:w-[230px] flex flex-col gap-6"
+            className="
+              w-full
+              md:w-[230px]
+
+              flex
+              flex-col
+              gap-6
+
+              items-center
+              md:items-start
+            "
           >
             <p className="text-[#FAFAFA] text-sm leading-6 md:mb-16 md:text-lg">
               All conversations are private. <br />
               All participation is discreet.
             </p>
 
-            <div className="flex flex-col gap-3 text-gray-400 text-sm">
+            <div className="flex flex-col gap-3 text-gray-400 text-sm items-center md:items-start">
               <motion.div
                 whileHover={{ x: 5 }}
                 className="flex items-center gap-2 cursor-pointer"
@@ -104,22 +152,34 @@ export default function Footer() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: false }}
-            className="w-full md:w-[230px] flex flex-col gap-[24px] items-start md:items-end"
+            className="
+              w-full
+              md:w-[230px]
+
+              flex
+              flex-col
+              gap-[24px]
+
+              items-center
+              md:items-end
+            "
           >
             <h3 className="text-[#C6A75E] text-sm md:text-[25px] md:mt-2 md:mb-2">
               Follow us on
             </h3>
 
             <div className="flex gap-5 text-xl md:text-[35px]">
-              {[FaXTwitter, FaYoutube, FaFacebookF, FaInstagram].map((Icon, i) => (
-                <motion.div
-                  key={i}
-                  whileHover={{ scale: 1.2, y: -3 }}
-                  className="cursor-pointer text-[#FAFAFA] hover:text-[#C6A75E] transition"
-                >
-                  <Icon />
-                </motion.div>
-              ))}
+              {[FaXTwitter, FaYoutube, FaFacebookF, FaInstagram].map(
+                (Icon, i) => (
+                  <motion.div
+                    key={i}
+                    whileHover={{ scale: 1.2, y: -3 }}
+                    className="cursor-pointer text-[#FAFAFA] hover:text-[#C6A75E] transition"
+                  >
+                    <Icon />
+                  </motion.div>
+                )
+              )}
             </div>
           </motion.div>
         </div>
@@ -130,7 +190,29 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
           viewport={{ once: false }}
-          className="w-full border-t border-[#2a2a2a] mt-12 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center text-[#C6A75E] text-sm"
+          className="
+            w-full
+            border-t
+            border-[#2a2a2a]
+
+            mt-12
+            pt-6
+
+            flex
+            flex-col
+            md:flex-row
+
+            justify-between
+
+            items-center
+            md:items-center
+
+            text-[#C6A75E]
+            text-sm
+
+            text-center
+            md:text-left
+          "
         >
           <p className="md:ml-20 md:text-[17px]">
             2026 TableOne. All Right Reserved.
@@ -143,6 +225,7 @@ export default function Footer() {
             >
               Privacy.
             </span>
+
             <span
               onClick={() => navigate("/terms")}
               className="text-[#FAFAFA] cursor-pointer hover:text-[#C6A75E] transition"
