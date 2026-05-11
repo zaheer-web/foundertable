@@ -1,13 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import icon1 from "../img/icon-1.png";
-import icon2 from "../img/icon-2.png";
-import icon3 from "../img/icon-3.png";
-import {
-  Users,
-  Clock3,
-  ShieldCheck,
-} from "lucide-react";
 
 /* 👇 PREMIUM FONTS */
 import "@fontsource/cormorant-garamond/300.css";
@@ -21,10 +13,10 @@ import "@fontsource/inter/400-italic.css";
 export default function ProblemSection() {
   return (
     <section
-      className="w-full pb-27 pt-10 md:pt-20"
+      className="w-full overflow-hidden pt-10 md:pt-20"
       style={{
         background:
-          "linear-gradient(180deg, #0F0F0F 0%, #3D2E13 134.42%)",
+          "linear-gradient(180deg, #0F0F0F 0%, #16120D 100%)",
       }}
     >
       <div className="max-w-[1472px] mx-auto px-5 md:px-10">
@@ -43,7 +35,17 @@ export default function ProblemSection() {
 
             {/* TAG */}
             <div
-              className="mb-1 md:mb-1 border border-[#A37C34] px-4 py-2 text-[11px] tracking-[0.2em] text-[#A37C34] w-max"
+              className="
+                mb-1
+                border
+                border-[#A37C34]
+                px-4
+                py-2
+                text-[11px]
+                tracking-[0.2em]
+                text-[#A37C34]
+                w-max
+              "
               style={{
                 fontFamily: "Inter",
                 fontWeight: "500",
@@ -54,7 +56,12 @@ export default function ProblemSection() {
 
             {/* HEADING */}
             <h2
-              className="text-white text-4xl md:text-6xl leading-tight"
+              className="
+                text-white
+                text-4xl
+                md:text-6xl
+                leading-tight
+              "
               style={{
                 fontFamily: "Cormorant Garamond",
                 fontWeight: "300",
@@ -73,7 +80,10 @@ export default function ProblemSection() {
 
               <br />
 
-              YOU HAVE <span className="text-[#A37C34]">ONE REAL</span>{" "}
+              YOU HAVE{" "}
+              <span className="text-[#A37C34]">
+                ONE REAL
+              </span>{" "}
               CONVERSATION.
             </h2>
           </motion.div>
@@ -84,7 +94,16 @@ export default function ProblemSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.8 }}
-            className="pt-0 md:pt-15 md:pl- w-full lg:w-[621px] text-[#FAFAFA] text-[16px] leading-[24px] space-y-5"
+            className="
+              pt-0
+              md:pt-15
+              w-full
+              lg:w-[621px]
+              text-[#FAFAFA]
+              text-[16px]
+              leading-[24px]
+              space-y-5
+            "
             style={{
               fontFamily: "Inter",
               fontWeight: "400",
@@ -110,217 +129,268 @@ export default function ProblemSection() {
           </motion.div>
         </div>
 
-        {/* 🔽 CARDS */}
-       {/* 🔽 CARDS */}
-{/* 🔽 CARDS */}
-<div
-  className="
-    mt-12
-    grid
-    grid-cols-1
-    md:grid-cols-3
-    gap-5
-    md:gap-7
-  "
->
-  {[
-    {
-      icon: Users,
-      title: "15",
-      subtitle: "SEATS PER TABLE",
-      desc: "Every seat individually reviewed. Not one filled by coincidence or category quota.",
-    },
-    {
-      icon: Clock3,
-      title: "3–4",
-      subtitle: "HOURS OF CONVERSATION",
-      desc: "A curated multi-course dinner designed to slow the room down and open the mind up.",
-    },
-    {
-      icon: ShieldCheck,
-      title: "0",
-      subtitle: "CAMERAS. MEDIA. RECORDING.",
-      desc: "Absolute. Non-negotiable. What is said at the Table stays at the Table.",
-    },
-  ].map((card, i) => {
-    const Icon = card.icon;
-
-    return (
-      <motion.div
-        key={i}
-        initial={{ opacity: 0, y: 80 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false }}
-        transition={{
-          delay: i * 0.15,
-          duration: 0.7,
-        }}
-        whileHover={{
-          y: -8,
-        }}
-        className="
-          group
-          relative
-          overflow-hidden
-          rounded-[32px]
-          border
-          border-white/10
-          bg-[#151515]/70
-          backdrop-blur-xl
-          p-[1px]
-          transition-all
-          duration-500
-          hover:border-[#A37C34]/40
-          hover:shadow-[0_0_40px_rgba(163,124,52,0.18)]
-        "
-      >
-        {/* BORDER GLOW */}
+        {/* 🔽 PREMIUM STATS SECTION */}
         <div
           className="
-            absolute
-            inset-0
-            opacity-0
-            group-hover:opacity-100
-            transition-all
-            duration-500
-            bg-gradient-to-br
-            from-[#A37C34]/20
-            via-transparent
-            to-transparent
-          "
-        />
-
-        {/* INNER CARD */}
-        <div
-          className="
-            relative
-            z-10
-            h-full
-            min-h-[390px]
-            rounded-[31px]
-            bg-[#111111]
-            px-6
-            py-8
-            md:px-7
-            md:py-9
-            flex
-            flex-col
-            items-center
-            text-center
+            mt-14
+            border-t
+            border-[#A37C34]/20
           "
         >
-          {/* TOP ICON BOX */}
           <div
             className="
-              relative
-              mb-8
-              flex
-              items-center
-              justify-center
+              grid
+              grid-cols-1
+              md:grid-cols-3
             "
           >
-            {/* OUTER RING */}
-            <div
-              className="
-                absolute
-                w-[95px]
-                h-[95px]
-                rounded-full
-                border
-                border-[#A37C34]/20
-              "
-            />
+            {[
+              {
+                number: "15",
+                heading: "Seat Per Table",
+                desc: "Every seat individually reviewed. Not one filled by coincidence or category quota.",
+              },
+              {
+                number: "3-4",
+                heading: "Hours of Conversation",
+                desc: "A curated multi-course dinner designed to slow the room down and open the mind up.",
+              },
+              {
+                number: "0",
+                heading: "Cameras. Media. Recording.",
+                desc: "Absolute. Non-negotiable. What is said at the Table stays at the Table.",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: i * 0.15,
+                  duration: 0.6,
+                }}
+                whileHover={{
+                  y: -8,
+                }}
+                className="
+                  group
+                  relative
 
-            {/* INNER ICON */}
-            <motion.div
-              whileHover={{
-                scale: 1.08,
-                rotate: 4,
-              }}
-              className="
-                relative
-                z-10
-                w-[74px]
-                h-[74px]
-                rounded-2xl
-                flex
-                items-center
-                justify-center
-                bg-gradient-to-br
-                from-[#A37C34]
-                to-[#D6B06A]
-                shadow-[0_15px_35px_rgba(163,124,52,0.30)]
-              "
-            >
-              <Icon
-                size={30}
-                className="text-black"
-                strokeWidth={2.2}
-              />
-            </motion.div>
+                  min-h-[330px]
+                  md:min-h-[360px]
+
+                  flex
+                  flex-col
+                  items-center
+                  justify-center
+                  text-center
+
+                  px-7
+                  py-12
+
+                  sm:px-10
+                  sm:py-14
+
+                  md:px-10
+                  md:py-16
+
+                  transition-all
+                  duration-500
+
+                  hover:bg-[#151515]
+                "
+              >
+
+                {/* PREMIUM HOVER BORDER */}
+                <div
+                  className="
+                    absolute
+                    inset-0
+
+                    border
+                    border-transparent
+
+                    group-hover:border-[#A37C34]/25
+
+                    transition-all
+                    duration-500
+                  "
+                />
+
+                {/* PREMIUM TOP LIGHT */}
+                <div
+                  className="
+                    absolute
+                    top-0
+                    left-0
+
+                    w-full
+                    h-[1px]
+
+                    bg-transparent
+
+                    group-hover:bg-[#A37C34]/40
+
+                    transition-all
+                    duration-500
+                  "
+                />
+
+                {/* DESKTOP DIVIDER */}
+                {i !== 2 && (
+                  <div
+                    className="
+                      hidden
+                      md:block
+                      absolute
+                      top-0
+                      right-0
+                      w-[1px]
+                      h-full
+                      bg-[#A37C34]/20
+                    "
+                  />
+                )}
+
+                {/* MOBILE DIVIDER */}
+                {i !== 2 && (
+                  <div
+                    className="
+                      md:hidden
+                      absolute
+                      bottom-0
+                      left-1/2
+                      -translate-x-1/2
+                      w-[88%]
+                      h-[1px]
+                      bg-[#A37C34]/15
+                    "
+                  />
+                )}
+
+                {/* NUMBER */}
+                <h2
+                  className="
+                    relative
+                    z-10
+
+                    text-center
+                    uppercase
+
+                    text-[90px]
+                    sm:text-[120px]
+                    md:text-[180px]
+
+                    leading-[0.9]
+
+                    tracking-[0.04em]
+
+                    text-[#8B6826]
+
+                    transition-all
+                    duration-500
+
+                    group-hover:text-[#A37C34]
+                  "
+                  style={{
+                    fontFamily: "Ivy Mode",
+                    fontWeight: "400",
+                    fontStyle: "normal",
+                    lineHeight: "100%",
+                    letterSpacing: "0.04em",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  {item.number}
+                </h2>
+
+                {/* TITLE */}
+                <h3
+                  className="
+                    relative
+                    z-10
+
+                    text-white
+
+                    text-[30px]
+                    sm:text-[36px]
+                    md:text-[46px]
+
+                    leading-[1.05]
+
+                    mt-3
+
+                    max-w-[320px]
+
+                    transition-all
+                    duration-500
+
+                    group-hover:text-[#F4D08A]
+                  "
+                  style={{
+                    fontFamily: "Cormorant Garamond",
+                    fontWeight: "300",
+                  }}
+                >
+                  {item.heading}
+                </h3>
+
+                {/* GOLD LINE */}
+                <div
+                  className="
+                    relative
+                    z-10
+
+                    w-[90px]
+                    h-[1px]
+
+                    bg-[#8B6826]
+
+                    mt-6
+                    mb-6
+
+                    transition-all
+                    duration-500
+
+                    group-hover:w-[120px]
+                    group-hover:bg-[#D6B06A]
+                  "
+                />
+
+                {/* DESCRIPTION */}
+                <p
+                  className="
+                    relative
+                    z-10
+
+                    text-white/78
+
+                    text-[13px]
+                    sm:text-[14px]
+                    md:text-[15px]
+
+                    leading-[1.9]
+
+                    max-w-[310px]
+
+                    transition-all
+                    duration-500
+
+                    group-hover:text-white/95
+                  "
+                  style={{
+                    fontFamily: "Inter",
+                    fontWeight: "400",
+                  }}
+                >
+                  {item.desc}
+                </p>
+
+              </motion.div>
+            ))}
           </div>
-
-          {/* NUMBER */}
-          <h3
-            className="
-              text-[52px]
-              md:text-[58px]
-              text-white
-              leading-none
-              mb-5
-            "
-            style={{
-              fontFamily: "Cormorant Garamond",
-              fontWeight: "300",
-            }}
-          >
-            {card.title}
-          </h3>
-
-          {/* SUBTITLE */}
-          <p
-            className="
-              text-[#D6B06A]
-              text-[18px]
-              md:text-[20px]
-              uppercase
-              tracking-[0.08em]
-              leading-[1.4]
-              mb-5
-              max-w-[260px]
-            "
-            style={{
-              fontFamily: "Inter",
-              fontWeight: "500",
-            }}
-          >
-            {card.subtitle}
-          </p>
-
-          {/* DIVIDER */}
-          <div className="w-[60px] h-[1px] bg-[#A37C34]/40 mb-5" />
-
-          {/* DESCRIPTION */}
-          <p
-            className="
-              text-[#EDEDED]
-              text-[15px]
-              leading-[26px]
-              max-w-[300px]
-            "
-            style={{
-              fontFamily: "Inter",
-              fontWeight: "400",
-            }}
-          >
-            {card.desc}
-          </p>
         </div>
-      </motion.div>
-    );
-  })}
-</div>
-
       </div>
     </section>
   );
