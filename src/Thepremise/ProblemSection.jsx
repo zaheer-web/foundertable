@@ -29,7 +29,10 @@ export default function ProblemSection() {
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
-            transition={{ duration: 0.8 }}
+            transition={{
+              duration: 1,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             className="w-full lg:w-[821px] flex flex-col gap-[12px]"
           >
 
@@ -93,7 +96,10 @@ export default function ProblemSection() {
             initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
-            transition={{ duration: 0.8 }}
+            transition={{
+              duration: 1,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             className="
               pt-0
               md:pt-15
@@ -163,15 +169,17 @@ export default function ProblemSection() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.3 }}
                 transition={{
-                  delay: i * 0.15,
-                  duration: 0.6,
+                  delay: i * 0.12,
+                  duration: 0.9,
+                  ease: [0.22, 1, 0.36, 1],
                 }}
                 whileHover={{
-                  y: -8,
+                  y: -10,
+                  scale: 1.015,
                 }}
                 className="
                   group
@@ -195,10 +203,18 @@ export default function ProblemSection() {
                   md:px-10
                   md:py-16
 
-                  transition-all
-                  duration-500
+                  overflow-hidden
 
-                  hover:bg-[#151515]
+                  transition-all
+                  duration-700
+
+                  bg-transparent
+
+                  hover:bg-[linear-gradient(180deg,#181818_0%,#111111_100%)]
+
+                  hover:shadow-[0_25px_60px_rgba(0,0,0,0.45)]
+
+                  will-change-transform
                 "
               >
 
@@ -211,10 +227,10 @@ export default function ProblemSection() {
                     border
                     border-transparent
 
-                    group-hover:border-[#A37C34]/25
+                    group-hover:border-[#A37C34]/30
 
                     transition-all
-                    duration-500
+                    duration-700
                   "
                 />
 
@@ -223,17 +239,33 @@ export default function ProblemSection() {
                   className="
                     absolute
                     top-0
-                    left-0
+                    left-1/2
+                    -translate-x-1/2
 
-                    w-full
+                    w-0
                     h-[1px]
 
-                    bg-transparent
+                    bg-[#D6B06A]
 
-                    group-hover:bg-[#A37C34]/40
+                    group-hover:w-full
 
                     transition-all
-                    duration-500
+                    duration-700
+                  "
+                />
+
+                {/* GLOW */}
+                <div
+                  className="
+                    absolute
+                    inset-0
+                    opacity-0
+                    group-hover:opacity-100
+
+                    transition-all
+                    duration-700
+
+                    bg-[radial-gradient(circle_at_top,rgba(163,124,52,0.12),transparent_60%)]
                   "
                 />
 
@@ -289,9 +321,10 @@ export default function ProblemSection() {
                     text-[#8B6826]
 
                     transition-all
-                    duration-500
+                    duration-700
+                    ease-out
 
-                    group-hover:text-[#A37C34]
+                    group-hover:text-[#D6B06A]
                   "
                   style={{
                     fontFamily: "Ivy Mode",
@@ -324,7 +357,8 @@ export default function ProblemSection() {
                     max-w-[320px]
 
                     transition-all
-                    duration-500
+                    duration-700
+                    ease-out
 
                     group-hover:text-[#F4D08A]
                   "
@@ -351,7 +385,7 @@ export default function ProblemSection() {
                     mb-6
 
                     transition-all
-                    duration-500
+                    duration-700
 
                     group-hover:w-[120px]
                     group-hover:bg-[#D6B06A]
@@ -375,7 +409,8 @@ export default function ProblemSection() {
                     max-w-[310px]
 
                     transition-all
-                    duration-500
+                    duration-700
+                    ease-out
 
                     group-hover:text-white/95
                   "
