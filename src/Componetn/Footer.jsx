@@ -8,18 +8,27 @@ import {
 } from "react-icons/fa6";
 
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 
 import logo from "../img/logo.png";
 
 export default function Footer() {
-  const navigate = useNavigate();
+
+  // 🔥 SAME SCROLL FUNCTION AS NAVBAR
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+
+    if (el) {
+      el.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
 
   const links = [
-    { name: "The Premise", path: "/" },
-    { name: "The Table", path: "/table" },
-    { name: "The Protocol", path: "/protocol" },
-    { name: "The Seat", path: "/seat" },
+    { name: "The Premise", id: "premise" },
+    { name: "The Table", id: "table" },
+    { name: "The Protocol", id: "protocol" },
+    { name: "The Seat", id: "seat" },
   ];
 
   return (
@@ -40,6 +49,7 @@ export default function Footer() {
             alt="logo"
             whileHover={{ scale: 1.05 }}
             className="w-[140px] md:w-[200px] object-contain cursor-pointer"
+            onClick={() => scrollToSection("premise")}
           />
         </motion.div>
 
@@ -49,20 +59,13 @@ export default function Footer() {
             w-full
             max-w-[1272px]
             mx-auto
-
             flex
             flex-col
             md:flex-row
-
             justify-between
-
             gap-[50px]
-
-            /* 👇 MOBILE CENTER */
             items-center
             text-center
-
-            /* 👇 DESKTOP SAME */
             md:items-start
             md:text-left
           "
@@ -77,11 +80,9 @@ export default function Footer() {
             className="
               w-full
               md:w-[230px]
-
               flex
               flex-col
               gap-[30px]
-
               items-center
               md:items-start
             "
@@ -95,7 +96,7 @@ export default function Footer() {
                 <motion.li
                   key={i}
                   whileHover={{ x: 6 }}
-                  onClick={() => navigate(item.path)}
+                  onClick={() => scrollToSection(item.id)}
                   className="cursor-pointer transition hover:text-[#C6A75E]"
                 >
                   {item.name}
@@ -113,11 +114,9 @@ export default function Footer() {
             className="
               w-full
               md:w-[230px]
-
               flex
               flex-col
               gap-6
-
               items-center
               md:items-start
             "
@@ -155,11 +154,9 @@ export default function Footer() {
             className="
               w-full
               md:w-[230px]
-
               flex
               flex-col
               gap-[24px]
-
               items-center
               md:items-end
             "
@@ -194,22 +191,15 @@ export default function Footer() {
             w-full
             border-t
             border-[#2a2a2a]
-
             mt-12
             pt-6
-
             flex
             flex-col
             md:flex-row
-
             justify-between
-
             items-center
-            md:items-center
-
             text-[#C6A75E]
             text-sm
-
             text-center
             md:text-left
           "
@@ -219,17 +209,11 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-6 mt-3 md:mt-0 md:mr-[80px] md:text-[17px]">
-            <span
-              onClick={() => navigate("/privacy")}
-              className="text-[#FAFAFA] cursor-pointer hover:text-[#C6A75E] transition"
-            >
+            <span className="text-[#FAFAFA] cursor-pointer hover:text-[#C6A75E] transition">
               Privacy.
             </span>
 
-            <span
-              onClick={() => navigate("/terms")}
-              className="text-[#FAFAFA] cursor-pointer hover:text-[#C6A75E] transition"
-            >
+            <span className="text-[#FAFAFA] cursor-pointer hover:text-[#C6A75E] transition">
               Terms.
             </span>
           </div>
