@@ -10,8 +10,8 @@ import {
   Sparkles,
 } from "lucide-react";
 
-import bgVideo from "../img/bg-vid.mp4";
-import mobileBg from "../img/image-2.jpeg";
+import bgVideo from "../img/za-1.mp4";
+import mobileBg from "../img/za-1.jpeg";
 
 /* 👇 PREMIUM FONTS */
 import "@fontsource/cormorant-garamond/300.css";

@@ -1,5 +1,5 @@
 import React from "react";
-import rightImg from "../img/img-4.png";
+import rightImg from "../img/za-4.jpeg";
 import { motion } from "framer-motion";
 
 /* 👇 PREMIUM FONTS */
