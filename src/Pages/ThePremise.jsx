@@ -10,11 +10,13 @@ import ContactFormSection from '../Thepremise/ContactFormSection'
 import TopBar from '../Thepremise/TopBar'
 import TimelineDesktop from '../Thepremise/TimelineDesktop'
 import TimelineMobile from '../Thepremise/TimelineMobile'
+import PartnershipSection from '../Thepremise/PartnershipSection'
 
 function ThePremise() {
   return (
    <div>
     <div className='overflow-hidden'><Hero/></div>
+     <div className='overflow-hidden'><PartnershipSection/></div>
     <div className='overflow-hidden'><ProblemSection/></div>
     <div className='overflow-hidden'><WhyTableOne/></div>
     <div className='overflow-hidden'><TableSection/></div>
