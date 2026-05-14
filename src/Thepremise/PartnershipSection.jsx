@@ -486,7 +486,7 @@ export default function PartnershipSection() {
                     uppercase
                     tracking-[0.25em]
                     text-[9px]
-                    text-white/30
+                    text-white/50
                   "
                 >
                   Strategic Global Partnership
