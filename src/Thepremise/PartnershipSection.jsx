@@ -502,7 +502,7 @@ export default function PartnershipSection() {
               animate={isInView ? "visible" : "hidden"}
               custom={2}
               className="
-                text-[#EAEAEA]/70
+                text-white
                 text-[14px]
                 sm:text-[15px]
                 md:text-[17px]
